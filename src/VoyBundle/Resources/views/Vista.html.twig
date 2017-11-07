@@ -1,0 +1,26 @@
+{% extends "layout.html.twig" %}
+
+{% block body %}
+
+{{ varphp1 }}
+
+{{  varphp3+varphp2 }}
+{#
+  <form method="post" action="{{ path('voyV1') }}">
+  Nombre: <input type="text" name="nombre"><br><br>
+  Apellidos: <input type="text" name="apellidos"><br><br>
+  Edad: <input type="text" name="edad"><br><br>
+  Correo: <input type="text" name="email"><br><br>
+  <input type="submit" name="submit" value="Enviar"><br><br><br><br>
+</form>
+
+  <form method="post" action="{{ path('vistaGet') }}">
+    Nombre: <input type="text" name="nom"><br><br>
+    Apellidos: <input type="text" name="ape"><br><br>
+    Edad: <input type="text" name="ed"><br><br>
+    Correo: <input type="text" name="em"><br><br>
+    <input type="submit" name="submit" value="Envia"><br><br>
+    </form>
+#}
+
+{% endblock %}

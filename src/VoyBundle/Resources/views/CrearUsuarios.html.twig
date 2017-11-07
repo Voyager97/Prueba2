@@ -1,0 +1,14 @@
+{% extends "layout.html.twig" %}
+
+{% block body %}
+
+  <form class ="form-group" method="post" action="{{ path('rutaCrearUsuarios') }}">
+    Nombre: <input class="form-control" placeholder="Ingresa tu nombre" type="text" name="nom"><br>
+    Apellidos: <input class="form-control" placeholder="Ingresa tus apellidos" type="text" name="ape"><br>
+    Edad: <input class="form-control" placeholder="Ingresa tu edad" type="text" name="ed"><br>
+    Correo: <input class="form-control" placeholder="Ingresa tu correo" type="text" name="em"><br>
+    Ocupacion: <input class="form-control" placeholder="Ingresa tu ocupacion" type="text" name="em"><br>
+    <input class="btn btn-success" type="submit" name="submit" value="Enviar"><br><br><br><br>
+    </form>
+
+{% endblock %}

@@ -1,0 +1,35 @@
+voyIndex:
+    path:     /
+    defaults: { _controller: VoyBundle:Voy:mostrar }
+
+voyV1:
+  path:  /pt
+  defaults: { _controller: VoyBundle:Voy:formularioGet }
+
+voyV3:
+  path: /V3/{nombre}
+  defaults: {_controller: VoyBundle:Voy:nombre}
+
+#rutaEjemploGet:
+#  path: /Ejemplo/Get
+#  defaults: { _controller: VoyBundle:Voy:formularioGet }
+
+#vistaGet:
+#  path: /Vista/Get
+#  defaults: { _controller: VoyBundle:Voy:formularioGetV}
+
+rutaformUsuarios:
+  path: /Crear/Usuarios
+  defaults: { _controller: VoyBundle:Voy:formUsuarios }
+
+rutaCrearUsuarios:
+  path: /Crear/Usuarios/Post
+  defaults: { _controller: VoyBundle:Voy:crearUsuarios}
+
+rutaMostrarUsuarios:
+  path: /Mostrar/Usuarios
+  defaults: { _controller: VoyBundle:Voy:mostrarUsuarios}
+
+app:
+    resource: "@PIE10Bundle/Controller/"
+    type:     annotation

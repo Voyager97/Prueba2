@@ -1,0 +1,37 @@
+{% extends "layout.html.twig" %}
+
+{% block body %}
+    HEY! Esto es la segunda vista.
+    Estamos probando.
+
+    Estas son sentencias de control:
+
+      {% set var1 = 10+20 %}
+      {% set var2 = 6 %}
+      {% set var3 = var1+var2 %}
+
+      {% if var2 == 5 %}
+        <div style="background-color: RED">
+          <p>Esto es lo que se muestra despues de que se entra en una estructura de control, se escribe en HTML.</p>
+        </div>
+      {% elseif var2 == 6 %}
+        <h1 style="color: BLUE"> var2 ahora vale 6.
+      {% else %}
+        <h1 style="color: RED"> var2 no vale 5.
+      {% endif %}
+
+
+
+      <h1>
+        {{ var1 }}<br>
+        {{ var2 }}<br>
+        {{ var3 }}
+      </h1>
+
+
+
+      {% for i in 1..10 %}
+        <p>Hola!</p>
+        {{ i }}<p></p>
+      {% endfor %}
+{% endblock %}

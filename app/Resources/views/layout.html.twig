@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width-device-width, initial-scale-1">
+        <title>{% block title %}Welcome!{% endblock %}</title>
+        {% block stylesheets %}{% endblock %}
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
+        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+    </head>
+    <body>
+      <nav class="navbar navbar-inverse">
+          <a class="navbar-brand" href="{{ path('voyIndex') }}">CMS</a>
+
+          <div class="dropdown">
+            <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+              Vistas
+              <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+              <li><a href="{{ path('voyV1') }}">Principal</a></li>
+              <li><a href="{{ path('voyV1') }}">Vista 2</a></li>
+
+            </ul>
+          </div>
+      </nav>
+      <div class="container">
+
+        <h1>¡Esto es de la principal!</h1>
+        {% block body %}{% endblock %}
+        {% block javascripts %}{% endblock %}
+      </div>
+        <script src="{{ asset('js/jquery-3.2.1.min.js')}}" charset="utf-8"></script>
+        <script src="{{ asset('js/bootstrap.min.js')}}" charset="utf-8"></script>
+    </body>
+</html>

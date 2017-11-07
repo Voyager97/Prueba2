@@ -1,0 +1,11 @@
+{% extends "layout.html.twig" %}
+
+{% block body %}
+
+<h1 class="page-header">Usuarios</h1>
+
+{% for usuario in usuarios %}
+    {{ usuario.nombre }}
+{% endfor %}
+
+{% endblock %}
